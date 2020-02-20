@@ -35,7 +35,7 @@ switch ($type) {
 }
 
 if ($content) {
-    header('Content-Type: image/svg+xml');
+    header('Content-Type: image/svg+xml; charset=utf-8');
     print $content;
 }
 else {
