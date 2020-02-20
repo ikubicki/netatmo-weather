@@ -93,10 +93,10 @@ class Svg
             }
             else {
                 if ($previous_record) {
-                    $path3->addPoint($count - 1, $previous_record->actual);
-                    $path4->addPoint($count - 1, $previous_record->gust);
-                    $poly3->addPoint($count - 1, $previous_record->actual);
-                    $poly4->addPoint($count - 1, $previous_record->gust);
+                    $path1->addPoint($count, $record->actual);
+                    $path2->addPoint($count, $record->gust);
+                    $poly1->addPoint($count, $record->actual);
+                    $poly2->addPoint($count, $record->gust);
                     $previous_record = null;
                 }
                 
@@ -322,8 +322,8 @@ class Svg
             }
             else {
                 if ($previous_record) {
-                    $path2->addPoint($count - 1, $previous_record->actual * 10);
-                    $poly2->addPoint($count - 1, $previous_record->actual * 10);
+                    $path1->addPoint($count, $record->actual * 10);
+                    $poly1->addPoint($count, $record->actual * 10);
                     $previous_record = null;
                 }
                 $path2->addPoint($count, $record->actual * 10);
