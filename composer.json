@@ -1,0 +1,14 @@
+{
+    "name": "irekk/netatmo-weather",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Irek Kubicki",
+            "email": "irek@ixdude.com"
+        }
+    ],
+	"autoload": {
+		"psr-4": {"Irekk\\Netatmo\\": "src/"}
+	},
+    "require": {}
+}

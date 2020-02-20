@@ -1,0 +1,11 @@
+<?php
+
+$config = new Irekk\Netatmo\Config([
+    'client_id' => 'YOUR CLIENT ID',
+    'client_secret' => 'YOUR SECRET',
+    'username' => 'YOUR EMAIL',
+    'password' => 'YOUR PASSWORD',
+    'device_id' => 'MAC ADDRESS OF YOUR WEATHER STATION',
+    'cache' => __DIR__ . '/cache',
+    'storage' => __DIR__ . '/data/db.sqlite',
+]);
