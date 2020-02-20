@@ -5,6 +5,8 @@ namespace Irekk\Netatmo;
 class Auth
 {
     
+    const NETATMO_AUTH_URL = 'https://api.netatmo.net/oauth2/token';
+    
     /**
      * @var Config
      */
@@ -39,7 +41,7 @@ class Auth
         if (!$cache->isLoaded() || $cache->isExpired()) {
             $http = new NotGuzzle;
             $response = $http->postJson(
-                NETATMO_AUTH_URL,
+                self::NETATMO_AUTH_URL,
                 [
                     'grant_type' => 'password',
                     'scope' => 'read_station',

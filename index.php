@@ -6,7 +6,7 @@ include 'vendor/autoload.php';
 include 'config.php';
 
 date_default_timezone_set("Europe/Warsaw");
-header('Content-Type: text/plain; charset=utf-8');
+header('Content-Type: text/html; charset=utf-8');
 
 $auth = new Irekk\Netatmo\Auth($config);
 $station = new Irekk\Netatmo\Station($config, $auth);
