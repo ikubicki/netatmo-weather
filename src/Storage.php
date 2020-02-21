@@ -150,7 +150,9 @@ class Storage
         $results = [];
         $resultset = $this->sqlite->query('SELECT date , * FROM t_inside ORDER BY date DESC LIMIT ' . $iLimit);
         while(($row = $resultset->fetchArray(SQLITE3_ASSOC))) {
-            $results[] = (object) $row;
+            if ($row['actual'] > 0) {
+                $results[] = (object) $row;
+            }
         }
         $resultset->finalize();
     	krsort($results);

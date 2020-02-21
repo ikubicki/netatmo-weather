@@ -30,6 +30,20 @@
         	<h2>Wilgotność <b><?php echo $inside->get($inside::HUMIDITY) ?>%</b></h2>
         	<br />
         </div>
+        <div class="controls">
+        	<label>
+        		Histogram
+        		<select id="days">
+                	<option value="1">1 dzień</option>
+                	<option value="2">2 dni</option>
+                	<option value="3">3 dni</option>
+                	<option value="5">5 dni</option>
+                	<option value="7">7 dni</option>
+        		</select>
+        	</label>
+        </div>
         <p class="footer">&copy; 2020 Irek Kubicki &nbsp; Powered by <a href="https://www.netatmo.com/pl-pl"><img src="assets/netatmo.png" alt="Netatmo" /></a> <a href="https://github.com/ikubicki/netatmo-weather">Github</a></p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+        <script src="assets/script.js"></script>
 	</body>
 </html>
